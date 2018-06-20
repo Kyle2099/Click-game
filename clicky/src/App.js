@@ -7,12 +7,13 @@ import "./App.css";
 
 // const App = () => <Counter />;
 
+
 class App extends React.Component {
   state = {
     friends
+
   }
-
-
+  
 
   render() {
     return (
@@ -39,10 +40,10 @@ class App extends React.Component {
           
           <FriendCard
           
-          
+          handleShuffle={this.handleShuffle}
             friend={this.friend}
-            // id={friend.id}
-            // key={friend.id}
+            id={friend.id}
+            key={friend.id}
             image={friend.image}
           />
         ))}
