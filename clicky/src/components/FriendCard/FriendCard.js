@@ -14,22 +14,31 @@ import "./FriendCard.css";
 
 //         </li>
 //         <li>
-         
+
 //         </li>
 //       </ul>
 //     </div>
 //   </div>
 // );
-const FriendCard = props => (
-  <div 
-    className="card" 
-    value={props.id} 
-    onClick={() => props.handleClick(props.id)}
-  >
-    <div className="img-container">
-      <img alt={props.name} src={props.image} />
+export const FriendCard = props => {  
+
+  // console.log(props);
+  return (
+    <div>
+      <div
+        className="card"
+        value={props.id}
+        onClick={() => props.handleClick(props.id)}
+        clicked={props.clicked}
+      >
+
+        <div className="img-container">
+          <img alt={props.name} src={props.image} />
+        </div>
+        <div />
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default FriendCard;

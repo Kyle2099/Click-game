@@ -1,40 +1,48 @@
 [
   {
     "id": 1,
+    "clicked": false,
     "image": "https://i2-prod.mirror.co.uk/incoming/article9287204.ece/ALTERNATES/s615/Mickey-mouse.jpg"
   },
   {
     "id": 2,
+    "clicked": false,
     "image": "http://images.all-free-download.com/images/graphicthumb/disney_disney_hd_cartoon_series_dwarfs_176349.jpg"
 
   },
   {
     "id": 3,
+    "clicked": false,
     "image": "https://orig00.deviantart.net/4331/f/2011/130/2/8/cartoon_mario_by_woopwoopwoop11-d3g249u.png"
 
   },
   {
     "id": 4,
+    "clicked": false,
     "image": "https://i.pinimg.com/originals/9e/24/e8/9e24e8b4effc1ef1bd17cb9e52e258d5.jpg"
 
   },
   {
     "id": 5,
+    "clicked": false,
     "image": "http://moziru.com/images/puppy-clipart-disney-cartoon-19.jpg"
 
   },
   {
     "id": 6,
+    "clicked": false,
     "image": "https://orig00.deviantart.net/6412/f/2011/288/e/a/blue_october_vector_by_durpy-d4bwjzm.png"
     
   },
   {
     "id": 7,
+    "clicked": false,
     "image": "https://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607"
     
   },
   {
     "id": 8,
+    "clicked": false,
     "image": "https://cdn.freebiesupply.com/logos/large/2x/scooby-doo-7-logo-png-transparent.png"
    
   }
