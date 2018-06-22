@@ -31,7 +31,7 @@ class App extends React.Component {
         </nav>
         <header class="header">
         <h1>Clicky Game!</h1>
-        <h2>Click on an image to earn points, but don't click on any more than once!</h2>
+        <h2>Click on a photo, but don't click the same one twice!</h2>
         </header>
         <body>
 
