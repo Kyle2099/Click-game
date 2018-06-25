@@ -3,9 +3,9 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import friendsData from "./friends.json";
 import "./App.css";
-// import Counter from "./components/Counter";
+// import Camp from "./components/Counter";
 
-// const App = () => <Counter />;
+// const Camp = () => <Counter />;
 
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
   state = {
     // friends: friendsData.sort(()=> Math.random() - 0.5),
     friends: friendsData.sort(()=> Math.random() - 0.5),
-    score: 0,
+    score: this.handleClick,
     highScore: 0,
     message: "Click to begin"
   }
@@ -36,15 +36,15 @@ class App extends React.Component {
 
     console.log("this is our copy array: ", arrayCopy)
 
-    // if(!id.clicked){
-    //   console.log("clicked!");
-    //   for(let i  = 0; i < arrayCopy.length; i++){        
-    //     if(arrayCopy[i].id == id){
-    //       console.log("we found a match");
-    //       arrayCopy[i].clicked = true;
-    //     }
-    //   }
-
+    if(!id.clicked){
+      console.log("clicked!");
+      for(let i  = 0; i < arrayCopy.length; i++){        
+        if(arrayCopy[i].id == id){
+          console.log("we found a match");
+          arrayCopy[i].clicked = true;
+        }
+      }
+    }
 
     for(let i = 0; i < arrayCopy.length; i++){
       if(arrayCopy[i].id == id){   
@@ -61,9 +61,9 @@ class App extends React.Component {
   
   }
 
-  handleCorrectGuess(index, array){
+  handleCorrectGuess(index, array) {
     console.log("correct", index);
-    // array[index].clicked = true;
+    array[index].clicked = true;
 
   setTimeout(()=>{
     this.setState({
@@ -78,17 +78,18 @@ class App extends React.Component {
 
   }
 
+
   handleIncorrectGuess(index){
     console.log("Incorrect", index)
-    //  this.setState({
-    //     score: 0,
-    //     highScore: this.checkHighScore(),
-    //     message: "Already been clicked!, please start over",
-    //     // friends: friendsData.sort(()=> Math.random() - 0.5)
-    //     friends: friendsData
-    //   })
+     this.setState({
+        score: 0,
+        highScore: this.checkHighScore(),
+        message: "Already been clicked!, please start over",
+        friends: friendsData.sort(()=> Math.random() - 0.5),
+        friends: friendsData
+      })
   }
-
+  
   componentDidUpdate(){
     console.log(this.state);
   }
@@ -96,18 +97,18 @@ class App extends React.Component {
   componentDidMount(){
     console.log(this.state);
   }
-
+  
   render() {
     return (
       <div>
       <Wrapper>
         <nav className="navbar"><ul>
           <li className="brand">
-            <a href="/">Clicky Game</a>
+            <a href="/">Clicky Game </a>
           </li>
-          <li className="">Click an image to begin!</li>
-          <li>Score: 0 |
-            Top Score: 0
+          <li className="" >Click an image to begin!</li>
+          <li>Score: {this.state.score} |
+            Top Score: 10
           </li>
         </ul>
         </nav>
@@ -122,7 +123,7 @@ class App extends React.Component {
           
           <FriendCard
           
-          // handleShuffle={friend.handleShuffle}
+          handleShuffle={friend.handleShuffle}
           handleClick={this.handleClick}
             // friend={freind.friend}
             id={friend.id}
