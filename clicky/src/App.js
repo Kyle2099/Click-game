@@ -70,7 +70,7 @@ class App extends React.Component {
         score: this.state.score + 1,
         highScore: this.checkHighScore(),
         message: "You got a point!",
-        // friends: array.sort(()=> Math.random() - 0.5)
+        friends: array.sort(()=> Math.random() - 0.5),
         friends: array
       });
   }, 1000);
